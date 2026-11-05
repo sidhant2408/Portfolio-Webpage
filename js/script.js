@@ -5,7 +5,7 @@ var root=document.documentElement;
 try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
 $('#theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
 // typing
-var roles=['AI & Machine Learning Engineer','AI Security Analytics Engineer','Builder of solutions','Detection & Automation Builder','Python Developer','Machine Learning Enthusiast','Security Analytics Engineer'];
+var roles=['AI & Machine Learning Engineer','AI Security Engineer','Data Scientist','Automation Engineer','Security Analytics Engineer','Builder'];
 var ri=0,ci=0,del=false,tw=$('#tw');
 (function tick(){var w=roles[ri];tw.textContent=w.slice(0,ci);
 if(!del&&ci<w.length){ci++;setTimeout(tick,70)}else if(!del){del=true;setTimeout(tick,1400)}
