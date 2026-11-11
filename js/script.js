@@ -5,7 +5,7 @@ var root=document.documentElement;
 try{var sv=localStorage.getItem('theme');if(sv)root.setAttribute('data-theme',sv)}catch(e){}
 $('#theme').onclick=function(){var dark=root.getAttribute('data-theme')==='dark'||(!root.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches);var n=dark?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
 // typing
-var roles=['AI & Machine Learning Engineer','AI Security Engineer','Data Scientist','Automation Engineer','Security Analytics Engineer','Builder'];
+var roles=['AI & Machine Learning Engineer','AI Security Engineer','Data Scientist','Automation Engineer','Builder'];
 var ri=0,ci=0,del=false,tw=$('#tw');
 (function tick(){var w=roles[ri];tw.textContent=w.slice(0,ci);
 if(!del&&ci<w.length){ci++;setTimeout(tick,70)}else if(!del){del=true;setTimeout(tick,1400)}
@@ -20,7 +20,7 @@ $$('.tabs button').forEach(function(b){b.onclick=function(){$$('.tabs button').f
 var sl=$$('.slide'),dots=$('.dots'),cur=0,timer;
 sl.forEach(function(_,i){var d=document.createElement('button');d.setAttribute('aria-label','Testimonial '+(i+1));d.onclick=function(){go(i);auto()};dots.appendChild(d)});
 function go(i){cur=i;sl.forEach(function(s,k){s.classList.toggle('on',k===i)});$$('button',dots).forEach(function(d,k){d.classList.toggle('on',k===i)})}
-function auto(){clearInterval(timer);timer=setInterval(function(){go((cur+1)%sl.length)},6500)}
+function auto(){clearInterval(timer);timer=setInterval(function(){go((cur+1)%sl.length)},26500)}
 go(0);auto();
 // scroll ui
 var top=$('#top'),bar=$('#bar');
